@@ -1,0 +1,26 @@
+<div id="jumbo" class="jumbotron">
+<h1>Registro</h1>
+</div>
+<div style="border: 1px solid grey" class="well well-lg col-lg-6 col-lg-offset-3">
+   <h2>Formulario de registro</h2><br>
+   <p>Registrate como usuario en nuestra web de cursos de Magia y podras suscribirte a los ditintos cursos que ofrecemos y acceder a las noticias y posts de la web: </p>
+    <form action="reg.php" method="POST">
+
+    <div class="form-group">
+     <label>-Introduce el DNI: </label><input class="form-control" maxlength="9" type="text" name="dni" id="dni" onchange="valTodo()" placeholder="Introduce tu DNI"><span id="vdni"></span> 
+     </div>
+
+     <div>
+     <label>-Introduce el usuario: </label><input class="form-control" maxlength="20" type="text" name="usu" id="usu" onchange="valTodo()" placeholder="Introduce tu usuario"> <span id="vusu"></span> 
+     </div>
+
+     <div>
+     <label>-Introduce la contrasenia: </label><input class="form-control" type="password" name="psw" id="psw" onchange="valTodo()" placeholder="Introduce tu contrasea"><span id="vpsw"></span> 
+     </div>
+
+     <div>
+     <label>-Introduce el correo electronico: </label><input class="form-control" type="text" onchange="valTodo()" id="correo" name="correo" placeholder="Introduce tu mail"><span id="vemail"></span> 
+     </div><br>
+     <input id="enviar" class="botn btn btn-lg btn-success" type="submit" disabled name="enviar" value="Registrarse">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="btn btn-lg botn btn-danger" type="reset" name="borrar" value="Borrar Campos">
+    </form>
+</div>

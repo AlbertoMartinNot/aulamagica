@@ -1,0 +1,25 @@
+
+
+<div id="jumbo" class="jumbotron"><h1>
+Tu Perfil</h1></div>
+
+<div class="container-fluid col-lg-4 col-lg-offset-4">
+<ul class="navperfil nav nav-tabs">
+ <li role="presentation" ><a href="#!/perfil">Tu Perfil</a></li>&nbsp;&nbsp;
+  <li role="presentation" class="active"><a href="#!/config">Configuracion</a></li>
+</ul>
+</div>
+
+<div class="well well-lg col-lg-4 col-lg-offset-4">
+   <h2>Configuracion</h2>
+   <p><mark>Edita tu perfil: </mark> <br></p>
+   
+    <form method="POST" class="form-group">
+     <div><label>-Cambiar nombre de usuario: </label> <input class="form-control" type="text" name="nuevonom" placeholder="Nuevo nombre..."></div>
+     <div><label>-Cambiar contraseña: </label>
+     <input class="form-control" type="password" name="nuevapass" placeholder="Nuevo contraseña..."></div>
+     <div><label>-Introduce tu antigua contraseña:</label><br></div>
+     <input class="form-control" type="password" name="antiguapass" placeholder="Introduce tu contraseña antigua..."><br>
+     <input id="botn" class="btn-success" type="submit" name="enviar" value="Guardar Perfil"><input id="botn" class="btn-danger" type="reset" name="borrar" value="Borrar Campos">
+    </form>
+</div>

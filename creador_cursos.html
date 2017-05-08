@@ -1,0 +1,28 @@
+<div id="jumbo" class="jumbotron"><h1>Creador</h1></div>
+<div style="border: 1px solid grey" class="well well-lg col-lg-4 col-lg-offset-4">
+	<h2>Crea tu Curso</h2>
+	<br>
+
+	<form method="POST" action="crearcur.php">
+    	<div>
+    		<label>-Introduce el nombre del curso:</label><br>
+			<input class="form-control" type="text" name="nomcur">
+		</div>
+		<div>
+    		<label>-Introduce la fecha de inicio:</label><br>
+			<input class="form-control" type="date" name="datecur">
+		</div>
+		<div>
+			<label>-Selecciona el nivel:</label><br>
+			<input type="radio" name="nivel" value="basico">Básico<br>
+			<input type="radio" name="nivel" value="medio">Medio<br>
+			<input type="radio" name="nivel" value="avanzado">Avanzado<br>
+		</div>
+		<br>
+		<div>
+			<label>-Introduce el material necesario para el curso: </label><br>
+			<textarea class="form-control" id="pregunta" rows="3" cols="50" name="mtr" placeholder="Material del curso"></textarea>
+		</div>
+		<input id="botn" class="btn-success" type="submit" name="enviar" value="Crear"><input id="botn" class="btn-danger" type="reset" name="borrar" value="Borrar Campos">
+    </form>
+</div>
