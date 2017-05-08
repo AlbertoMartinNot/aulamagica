@@ -20,7 +20,10 @@ magia.config(['$routeProvider', function($routeProvider) {
       templateUrl : "config.html"
   })
   .when("/foro", {
-      templateUrl : "foro.html"
+      templateUrl : "Foro.html"
+  })
+   .when("/contraseña", {
+      templateUrl : "contraseña.html"
   });
 
  }]);

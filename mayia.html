@@ -2,13 +2,12 @@
 <html lang="es" ng-app="magia">
 <head>
 	<title>Cursos de Magia</title>
-  <meta name="viewport" content="width=device-width initial-scale=1.0">
-  <meta charset="utf-8">
-	<link rel="stylesheet" href="css/bootstrap.css">
+  <meta charset="utf-8" name="viewport" content="width=device-width initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="mayia.css">
-  <script src="jquery-3.2.0.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.min.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-route.min.js"></script>
   <script src="routing.js"></script>
   <script src="validacionregistro.js"></script>
@@ -18,20 +17,11 @@
 <div class="nave collapse navbar-collapse" id="top bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#!/"><span class="glyphicon glyphicon-home"></span>&nbsp;Inicio <span class="sr-only">(current)</span></a></li>
-        <li><a href="#!/cursos"><span class="glyphicon glyphicon-envelope"></span>&nbsp;Cursos</a></li>
-        <li><a href="#!/perfil"><span class="glyphicon glyphicon-envelope"></span>&nbsp;Perfil</a></li>
+        <li><a href="#!/cursos"><span class="glyphicon glyphicon-list"></span>&nbsp;Cursos</a></li>
+        <li><a href="#!/perfil"><span class="glyphicon glyphicon-user"></span>&nbsp;Perfil</a></li>
       </ul>
-      <form id="toplf" action="inicio.php" method="POST" class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" name="sesionUsu" class="form-control" placeholder="Usuario">
-        </div>
-         <div class="form-group">
-          <input type="password" name="sesionPsw" class="form-control" placeholder="Contraseña">
-        </div>
-        <button type="submit" class="btn btn-default">Iniciar Sesion&nbsp;</button>
-      </form>
       <ul id="topdr" class="nav navbar-nav navbar-right">
-        <li><a href="#!/foro"><span class="glyphicon glyphicon-envelope"></span>&nbsp;Foro</a></li>
+        <li><a href="#!/foro"><span class="glyphicon glyphicon-comment"></span>&nbsp;Foro</a></li>
         <li><a href="#!/contacto"><span class="glyphicon glyphicon-envelope"></span>&nbsp;Contacto</a></li>
         <li><a href="#">Cerrar Sesion&nbsp;<span class="glyphicon glyphicon-remove"></span></a></li>
           </ul>
