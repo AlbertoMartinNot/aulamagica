@@ -7,6 +7,7 @@ magia.config(['$routeProvider', function($routeProvider) {
   })
   .when("/contacto", {
       templateUrl : "contacto.html"
+
   }).when("/registrar", {
       templateUrl : "registro.html"
   })
@@ -24,6 +25,9 @@ magia.config(['$routeProvider', function($routeProvider) {
   })
    .when("/contraseña", {
       templateUrl : "contraseña.html"
+  })
+      .when("/login", {
+      templateUrl : "iniciarsesion.html"
   });
 
  }]);

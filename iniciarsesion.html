@@ -1,0 +1,13 @@
+<div id="jumbo" class="jumbotron">
+<h1>Inicio de Sesión</h1>
+</div>
+<div style="border: 1px solid grey" class="well well-lg col-lg-6 col-lg-offset-3">
+    <form action="inicio.php" method="POST">
+    <div class="form-group">
+     <label>-Introduce el usuario: </label><input class="form-control" maxlength="20" type="text" name="usu" id="usu" onchange="valTodo()" placeholder="Introduce tu usuario"> <span id="vusu"></span><br>
+     <div class="form-group">
+     <label>-Introduce la contrasenia: </label><input class="form-control" type="password" name="psw" id="psw" onchange="valTodo()" placeholder="Introduce tu contrasea"><span id="vpsw"></span> 
+     </div><br>
+     <input id="enviar" class="botn btn btn-lg btn-success pull-right" type="submit" disabled name="enviar" value="Iniciar Sesion">
+    </form>
+</div>
