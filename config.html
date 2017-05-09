@@ -10,15 +10,32 @@ Configuracion</h1></div>
 </ul>
 </div>
 
-<div class="well well-lg col-lg-4 col-lg-offset-4"><br>
-   <p><mark>Edita tu perfil: </mark> <br></p>
+<div class="well well-lg col-lg-4 col-lg-offset-4" style="border: 1px solid grey;">
+   <p><mark>Edita tu perfil: </mark></p>
    
-    <form method="POST" class="form-group">
-     <div><label><strong>Cambiar nombre de usuario: </strong> </label> <input class="form-control" type="text" name="nuevonom" placeholder="Nuevo nombre..."></div>
-     <div><label><strong>Cambiar contraseña: </strong> </label>
-     <input class="form-control" type="password" name="nuevapass" placeholder="Nuevo contraseña..."></div>
-     <div><label><strong>Introduce tu antigua contraseña:</strong></label><br></div>
-     <input class="form-control" type="password" name="antiguapass" placeholder="Introduce tu contraseña antigua..."><br>
-     <input class="btn btn-success btn-lg pull-left" type="submit" name="enviar" value="Guardar Perfil"><input class="btn btn-danger btn-lg pull-right" type="reset" name="borrar" value="Borrar Campos">
+   <form method="POST" name="formconf" novalidate>
+
+     <div class="form-group" ng-class="{ 'has-error' : formconf.nuevonom.$invalid && !formconf.nuevonom.$pristine }">
+         <label>Cambiar nombre de usuario:</label> <input class="form-control" type="text" name="nuevonom" placeholder="Nuevo nombre..." ng-model="nuevonom" ng-minlength="3" required>
+         <span class="help-block" ng-show="formconf.nuevonom.$invalid && !formconf.nuevonom.$pristine && formconf.nuevonom.$error.required">*Campo requerido.</span>
+         <span class="help-block" ng-show="formconf.nuevonom.$error.minlength">*Campo demasiado corto.</span>
+     </div>
+
+    <div class="form-group" ng-class="{ 'has-error' : formconf.nuevapass.$invalid && !formconf.nuevapass.$pristine }">
+        <label>Cambiar contraseña:</label>
+        <input class="form-control" type="password" name="nuevapass" placeholder="Nueva contraseña..." ng-model="nuevapass" ng-minlength="6" required>
+        <span class="help-block" ng-show="formconf.nuevapass.$invalid && !formconf.nuevapass.$pristine && formconf.nuevapass.$error.required">*Campo requerido.</span>
+        <span class="help-block" ng-show="formconf.nuevapass.$error.minlength">*Campo demasiado corto.</span>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error' : formconf.antiguapass.$invalid && !formconf.antiguapass.$pristine }">
+        <label>Introduce tu antigua contraseña:</label>
+        <input class="form-control" type="password" name="antiguapass" placeholder="Introduce tu contraseña antigua..." ng-model="antiguapass" ng-minlength="6" required>
+        <span class="help-block" ng-show="formconf.antiguapass.$invalid && !formconf.antiguapass.$pristine && formconf.antiguapass.$error.required">*Campo requerido.</span>
+        <span class="help-block" ng-show="formconf.antiguapass.$error.minlength">*Campo demasiado corto.</span>
+    </div>
+           <br>
+
+        <input class="btn btn-success btn-lg pull-left" type="submit" name="enviar" value="Guardar Perfil" ng-disabled="formconf.$invalid"><input class="btn btn-danger btn-lg pull-right" type="reset" name="borrar" value="Borrar Campos">
     </form>
 </div>
