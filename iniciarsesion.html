@@ -2,12 +2,17 @@
 <h1>Inicio de Sesión</h1>
 </div>
 <div style="border: 1px solid grey" class="well well-lg col-lg-6 col-lg-offset-3">
-    <form action="inicio.php" method="POST">
-    <div class="form-group">
-     <label>-Introduce el usuario: </label><input class="form-control" maxlength="20" type="text" name="usu" id="usu" onchange="valTodo()" placeholder="Introduce tu usuario"> <span id="vusu"></span><br>
-     <div class="form-group">
-     <label>-Introduce la contrasenia: </label><input class="form-control" type="password" name="psw" id="psw" onchange="valTodo()" placeholder="Introduce tu contrasea"><span id="vpsw"></span> 
-     </div><br>
-     <input id="enviar" class="botn btn btn-lg btn-success pull-right" type="submit" disabled name="enviar" value="Iniciar Sesion">
+    <form action="inicio.php" method="POST" name="myForm" novalidate>
+    <div class="form-group" ng-class="{ 'has-error' : myForm.usu.$invalid && !myForm.usu.$pristine }">
+     <label>Introduce el usuario: </label><input class="form-control" maxlength="20" type="text" name="usu" placeholder="Introduce tu usuario" ng-model="usuario.usu" ng-minlength="3" required>
+     <span class="help-block" ng-show="myForm.usu.$invalid && !myForm.usu.$pristine && myForm.usu.$error.required">*Campo requerido.</span>
+     <span class="help-block" ng-show="myForm.usu.$error.minlength">*Campo demasiado corto.</span>
+     <br>
+     <div class="form-group" ng-class="{ 'has-error' : myForm.psw.$invalid && !myForm.psw.$pristine }">
+     <label>Introduce la contraseña: </label><input class="form-control" type="password" name="psw" placeholder="Introduce tu contraseñsa" ng-model="usuario.psw" ng-minlength="6" required> 
+     </div>
+     <span class="help-block" ng-show="myForm.psw.$invalid && !myForm.psw.$pristine && myForm.psw.$error.required">*Campo requerido.</span>
+     <span class="help-block" ng-show="myForm.psw.$error.minlength">*Campo demasiado corto.</span><br>
+     <input id="enviar" class="botn btn btn-lg btn-success pull-right" type="submit" name="enviar" value="Iniciar Sesion" ng-disabled="myForm.$invalid">
     </form>
 </div>
