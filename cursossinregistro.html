@@ -5,17 +5,17 @@
     <div class="col-md-2">
       <ul class="nav flex-column">
         <li class="nav-item dropdown" style="border-bottom: 1px solid grey;">
-          <a class="nav-link" style="font-size: 18px;" ng-click="mostrar('cartas')">Cartas</a>
+          <a class="nav-link btn" style="font-size: 18px;" ng-click="mostrar('cartas')" ng-class="cartas">Cartas</a>
         </li>
         <li class="nav-item dropdown" style="border-bottom: 1px solid grey;">
-          <a class="nav-link" style="font-size: 18px;" ng-click="mostrar('monedas')">Monedas</a>
+          <a class="nav-link btn" style="font-size: 18px;" ng-click="mostrar('monedas')" ng-class="monedas">Monedas</a>
         </li>
         <li class="nav-item dropdown" style="border-bottom: 1px solid grey;">
-          <a class="nav-link" style="font-size: 18px;" ng-click="mostrar('cuerda')">Cuerdas</a>
+          <a class="nav-link btn" style="font-size: 18px;" ng-click="mostrar('cuerda')" ng-class="cuerda">Cuerdas</a>
         </li>
       </ul>
     </div>
-    <div ng-show="cartas">
+    <div ng-if="cartas == 'active'">
     <div class="well col-md-3">
       <h3 style="text-align: center;"><strong>Cartas Nivel Basico</strong></h3>
       <p>Con este curso conseguirás una buena base y una introducción a la cartomagia y sus trucos y técnicas, ideal para personas que no hayan tenido ningún contacto con los trucos de magia y deseen iniciarse.</p>
@@ -41,7 +41,7 @@
       </p>
     </div>
     <div class="well col-md-3">
-      <h3 style="text-align: center;text-decoration: underline;"><strong>Cartas Nivel Avanzado</strong></h3>
+      <h3><strong>Cartas Nivel Avanzado</strong></h3>
       <p>Con este curso conseguirás una buena base y una introducción a la cartomagia y sus trucos y técnicas, ideal para personas que no hayan tenido ningún contacto con los trucos de magia y deseen iniciarse.</p>
       <p><strong>Caracteristicas</strong><br>
         <ul>
@@ -54,7 +54,7 @@
       </p>
     </div>
     </div>
-    <div ng-show="monedas">
+    <div ng-if="monedas == 'active'">
     <div class="well col-md-3">
       <h3 style="text-align: center;"><strong>Monedas Nivel Basico</strong></h3>
       <p>Con este curso conseguirás una buena base y una introducción a la magia con monedas y sus trucos y técnicas, ideal para personas que no hayan tenido ningún contacto con los trucos de magia y deseen iniciarse.</p>
@@ -93,7 +93,7 @@
       </p>
     </div>
     </div>
-    <div ng-show="cuerda">
+    <div ng-if="cuerda == 'active'">
     <div class="well col-md-3">
       <h3 style="text-align: center;"><strong> Cuerdas Nivel Basico</strong></h3>
       <p>Con este curso conseguirás una buena base y una introducción a la cartomagia y sus trucos y técnicas, ideal para personas que no hayan tenido ningún contacto con los trucos de magia y deseen iniciarse.</p>

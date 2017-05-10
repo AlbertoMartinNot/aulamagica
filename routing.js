@@ -36,10 +36,10 @@ magia.controller('cursos', function($scope){
 
   $scope.mostrar=function(curso){
     
-    $scope.cartas=false;
-    $scope.monedas=false;
-    $scope.cuerda=false;
-    $scope[curso]=true;
+    $scope.cartas="";
+    $scope.monedas="";
+    $scope.cuerda="";
+    $scope[curso]="active";
   }
 
 
