@@ -33,9 +33,9 @@ magia.config(['$routeProvider', function($routeProvider) {
  }]);
 
 magia.controller('cursos', function($scope){
-
+    $scope.inicio=true;
   $scope.mostrar=function(curso){
-    
+    $scope.inicio=false;
     $scope.cartas="";
     $scope.monedas="";
     $scope.cuerda="";
