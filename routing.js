@@ -15,7 +15,7 @@ magia.config(['$routeProvider', function($routeProvider) {
       templateUrl : "perfil-kun.html"
   })
   .when("/cursos", {
-      templateUrl : "cursos.html"
+      templateUrl : "cursossinregistro.html"
   })
   .when("/config", {
       templateUrl : "config.html"
@@ -31,3 +31,16 @@ magia.config(['$routeProvider', function($routeProvider) {
   });
 
  }]);
+
+magia.controller('cursos', function($scope){
+
+  $scope.mostrar=function(curso){
+    
+    $scope.cartas=false;
+    $scope.monedas=false;
+    $scope.cuerda=false;
+    $scope[curso]=true;
+  }
+
+
+});

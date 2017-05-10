@@ -1,78 +1,142 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width initial-scale=1.0">
-	<title>Cursos</title>
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="mayia.css">
-</head>
-<body>
-<div class="nave collapse navbar-collapse" id="top bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="mayia.html"><span class="glyphicon glyphicon-home"></span>&nbsp;Inicio <span class="sr-only">(current)</span></a></li>
-        <li><a href="cursos.html"><span class="glyphicon glyphicon-education"></span>&nbsp;Cursos</a></li>
-        <li><a href="perfil-kun.html"><span class="glyphicon glyphicon-user"></span>&nbsp;Perfil</a></li>
-        <li><p class="navbar-text">Sesion Iniciada como:  <span></span></p></li>
-        
-      </ul>
-      
-      <ul id="topdr" class="nav navbar-nav navbar-right">
-        <li><a href="Foro.html"><span class="glyphicon glyphicon-comment"></span>&nbsp;Foro</a></li>
-        
-        <li><a href="sesion.php">Cerrar Sesion&nbsp;<span class="glyphicon glyphicon-remove"></span></a></li>
-          </ul>
+<div id="jumbo" class="jumbotron"><h1>Cursos</h1></div>
+
+<div class="container-fluid" ng-controller="cursos">
+  <div class="row">
+    <div class="col-md-2">
+      <ul class="nav flex-column">
+        <li class="nav-item dropdown" style="border-bottom: 1px solid grey;">
+          <a class="nav-link" style="font-size: 18px;" ng-click="mostrar('cartas')">Cartas</a>
+        </li>
+        <li class="nav-item dropdown" style="border-bottom: 1px solid grey;">
+          <a class="nav-link" style="font-size: 18px;" ng-click="mostrar('monedas')">Monedas</a>
+        </li>
+        <li class="nav-item dropdown" style="border-bottom: 1px solid grey;">
+          <a class="nav-link" style="font-size: 18px;" ng-click="mostrar('cuerda')">Cuerdas</a>
         </li>
       </ul>
     </div>
-  </div>
-</nav>
-
-<div id="jumbo" class="jumbotron"><h1>コース</h1></div>
-
-<div class="container-fluid">
-<div class="row">
-
-<div class="sidebar col-xs-8 col-sm-6 col-md-4 col-lg-3">
-    <ul class="sidebar-nav">
-      <div class="dropdown">
-        <li class="sub " ><button class="bot btn dropdown-toggle" data-toggle="dropdown">Cartas</button>
-        </li>
-        </div>
-        <div class="dropdown">
-        <li class="sub"><button class="bot btn dropdown-toggle" data-toggle="dropdown">Monedas</button>
-        </li>
-        </div>
-    </ul>
-
-  </div>
-
-  <div id="cartas">
-    <div class=" col-xs-12 col-sm-10 col-md-8 col-lg-3" style="border-right: 1px solid black; margin-left: 8%;"><p class="enc text-capitalize"> nivel basico</p><br><br><br><br><p id="reg"><a class="btn btn-primary btn-lg" href="suscripcioncartasbasico.html" role="button">Suscribete!</a></p></div>
-    <div class=" col-xs-12 col-sm-10 col-md-8 col-lg-3" style="border-right: 1px solid black;"><p  class="enc text-capitalize"> nivel intermedio</p><br><p><strong>LA PROMOCIÓ!</strong>: Por la suscripcion a tu primer nivel intermedio, esté incuirá el curso de nivel básico.</p><br><p id="reg"><a class="btn btn-primary btn-lg" href="suscripcioncartasmedio.html" role="button">Suscribete!</a></p></div>
-    <div class=" col-xs-12 col-sm-10 col-md-8 col-lg-3"><p  class="enc text-capitalize"> nivel avanzado</p><br><p id="reg"><a class="btn btn-primary btn-lg" href="suscripcioncartasavanz.html" role="button">Suscribete!</a></p></div></div>
-
-    <!-- LO DE LAS MONEDAS <div class=" col-xs-12 col-sm-10 col-md-8 col-lg-3" style="border-right: 1px solid black; margin-left: 8%;"><p class="enc text-capitalize"> nivel basico</p><br><br><br><br><p id="reg"><a class="btn btn-primary btn-lg" href="suscripcionmonedasbasico.html" role="button">Suscribete!</a></p></div>
-    <div class=" col-xs-12 col-sm-10 col-md-8 col-lg-3" style="border-right: 1px solid black;"><p  class="enc text-capitalize"> nivel intermedio</p><br><p><strong>LA PROMOCIÓ!</strong>: Por la suscripcion a tu primer nivel intermedio, esté incuirá el curso de nivel básico.</p><br><p id="reg"><a class="btn btn-primary btn-lg" href="suscripcionmonedasmedio.html" role="button">Suscribete!</a></p></div>
-    <div class=" col-xs-12 col-sm-10 col-md-8 col-lg-3"><p  class="enc text-capitalize"> nivel avanzado</p><br><p id="reg"><a class="btn btn-primary btn-lg" href="suscripcionmonedasavanz.html" role="button">Suscribete!</a></p></div> --> 
-
-    <!-- LO DE LAS CARTAS <div class=" col-xs-12 col-sm-10 col-md-8 col-lg-3" style="border-right: 1px solid black; margin-left: 8%;"><p class="enc text-capitalize"> nivel basico</p><br><br><br><br><p id="reg"><a class="btn btn-primary btn-lg" href="suscripcioncuerdasbasico.html" role="button">Suscribete!</a></p></div>
-    <div class=" col-xs-12 col-sm-10 col-md-8 col-lg-3" style="border-right: 1px solid black;"><p  class="enc text-capitalize"> nivel intermedio</p><br><p><strong>LA PROMOCIÓ!</strong>: Por la suscripcion a tu primer nivel intermedio, esté incuirá el curso de nivel básico.</p><br><p id="reg"><a class="btn btn-primary btn-lg" href="suscripcioncuerdasmedio.html" role="button">Suscribete!</a></p></div>
-    <div class=" col-xs-12 col-sm-10 col-md-8 col-lg-3"><p  class="enc text-capitalize"> nivel avanzado</p><br><p id="reg"><a class="btn btn-primary btn-lg" href="suscripcioncuerdassavanz.html" role="button">Suscribete!</a></p></div> --> 
-
+    <div ng-show="cartas">
+    <div class="well col-md-3">
+      <h3 style="text-align: center;"><strong>Cartas Nivel Basico</strong></h3>
+      <p>Con este curso conseguirás una buena base y una introducción a la cartomagia y sus trucos y técnicas, ideal para personas que no hayan tenido ningún contacto con los trucos de magia y deseen iniciarse.</p>
+      <p><strong>Caracteristicas:</strong><br>
+        <ul>
+          <li>Para usuarios principiantes</li>
+          <li>X horas de contenido audiovisual</li>
+          <li>Baraja de cartas francesa necesaria</li>
+        </ul>
+        <a class="btn btn-primary btn-block" href="#!/registrar">Registrate para inscribite</a>
+      </p>
+    </div>
+    <div class="well col-md-3" style="background-color: white;">
+      <h3 style="text-align: center;"><strong>Cartas Nivel Medio</strong></h3>
+      <p>Con este curso conseguirás una buena base y una introducción a la cartomagia y sus trucos y técnicas, ideal para personas que no hayan tenido ningún contacto con los trucos de magia y deseen iniciarse.</p>
+      <p><strong>Caracteristicas</strong><br>
+        <ul>
+          <li>Para usuarios con algo de experiencia</li>
+          <li>X horas de contenido audiovisual</li>
+          <li>Baraja de cartas francesa necesaria</li>
+        </ul>
+         <a class="btn btn-primary btn-block" href="#!/registrar">Registrate para inscribite</a>
+      </p>
+    </div>
+    <div class="well col-md-3">
+      <h3 style="text-align: center;text-decoration: underline;"><strong>Cartas Nivel Avanzado</strong></h3>
+      <p>Con este curso conseguirás una buena base y una introducción a la cartomagia y sus trucos y técnicas, ideal para personas que no hayan tenido ningún contacto con los trucos de magia y deseen iniciarse.</p>
+      <p><strong>Caracteristicas</strong><br>
+        <ul>
+          <li>Usuarios de nivel alto</li>
+          <li>X horas de contenido audiovisual</li>
+          <li>Baraja de cartas francesa necesaria</li>
+          
+        </ul>
+        <a class="btn btn-primary btn-block" href="#!/registrar">Registrate para inscribite</a>
+      </p>
+    </div>
+    </div>
+    <div ng-show="monedas">
+    <div class="well col-md-3">
+      <h3 style="text-align: center;"><strong>Monedas Nivel Basico</strong></h3>
+      <p>Con este curso conseguirás una buena base y una introducción a la magia con monedas y sus trucos y técnicas, ideal para personas que no hayan tenido ningún contacto con los trucos de magia y deseen iniciarse.</p>
+      <p><strong>Caracteristicas:</strong><br>
+        <ul>
+          <li>Para usuarios principiantes</li>
+          <li>X horas de contenido audiovisual</li>
+          <li>Set de monedas</li>
+        </ul>
+        <a class="btn btn-primary btn-block" href="#!/registrar">Registrate para inscribite</a>
+      </p>
+    </div>
+    <div class="well col-md-3" style="background-color: white;">
+      <h3 style="text-align: center;"><strong>Monedas Nivel Medio</strong></h3>
+      <p>Con este curso conseguirás una buena base y una introducción a la magia con monedas y sus trucos y técnicas, ideal para personas que no hayan tenido ningún contacto con los trucos de magia y deseen iniciarse.</p>
+      <p><strong>Caracteristicas</strong><br>
+        <ul>
+          <li>Para usuarios con algo de experiencia</li>
+          <li>X horas de contenido audiovisual</li>
+          <li>Set de monedas</li>
+        </ul>
+         <a class="btn btn-primary btn-block" href="#!/registrar">Registrate para inscribite</a>
+      </p>
+    </div>
+    <div class="well col-md-3">
+      <h3><strong>Monedas Nivel Avanzado</strong></h3>
+      <p>Con este curso conseguirás una buena base y una introducción a la magia con monedas y sus trucos y técnicas, ideal para personas que no hayan tenido ningún contacto con los trucos de magia y deseen iniciarse.</p>
+      <p><strong>Caracteristicas</strong><br>
+        <ul>
+          <li>Usuarios de nivel alto</li>
+          <li>X horas de contenido audiovisual</li>
+          <li>Set de monedas</li>
+          
+        </ul>
+        <a class="btn btn-primary btn-block" href="#!/registrar">Registrate para inscribite</a>
+      </p>
+    </div>
+    </div>
+    <div ng-show="cuerda">
+    <div class="well col-md-3">
+      <h3 style="text-align: center;"><strong> Cuerdas Nivel Basico</strong></h3>
+      <p>Con este curso conseguirás una buena base y una introducción a la cartomagia y sus trucos y técnicas, ideal para personas que no hayan tenido ningún contacto con los trucos de magia y deseen iniciarse.</p>
+      <p><strong>Caracteristicas:</strong><br>
+        <ul>
+          <li>Para usuarios principiantes</li>
+          <li>X horas de contenido audiovisual</li>
+          <li>Cuerda y tijeras</li>
+        </ul>
+        <a class="btn btn-primary btn-block" href="#!/registrar">Registrate para inscribite</a>
+      </p>
+    </div>
+    <div class="well col-md-3" style="background-color: white;">
+      <h3 style="text-align: center;"><strong>Cuerdas Nivel Medio</strong></h3>
+      <p>Con este curso conseguirás una buena base y una introducción a la cartomagia y sus trucos y técnicas, ideal para personas que no hayan tenido ningún contacto con los trucos de magia y deseen iniciarse.</p>
+      <p><strong>Caracteristicas</strong><br>
+        <ul>
+          <li>Para usuarios con algo de experiencia</li>
+          <li>X horas de contenido audiovisual</li>
+          <li>Cuerda y tijeras</li>
+        </ul>
+         <a class="btn btn-primary btn-block" href="#!/registrar">Registrate para inscribite</a>
+      </p>
+    </div>
+    <div class="well col-md-3">
+      <h3><strong>Cuerdas Nivel Avanzado </strong></h3>
+      <p>Con este curso conseguirás una buena base y una introducción a la cartomagia y sus trucos y técnicas, ideal para personas que no hayan tenido ningún contacto con los trucos de magia y deseen iniciarse.</p>
+      <p><strong>Caracteristicas</strong><br>
+        <ul>
+          <li>Usuarios de nivel alto</li>
+          <li>X horas de contenido audiovisual</li>
+          <li>Cuerda y tijeras</li>
+          
+        </ul>
+        <a class="btn btn-primary btn-block" href="#!/registrar">Registrate para inscribite</a>
+      </p>
+    </div>
+    </div>
   </div>
 </div>
 
-<nav class="navbot navbar navbar-default navbar-fixed-bottom">
-  <div class="botm container-fluid">
-  <ul class="navbar-left list-inline"><li><p id="pi" class="navbar-text">Cursos de Magia</p></li></ul>
-  <ul id="dch" class=" navbar-nav navbar-right list-inline"><li><p id="rede" class="navbar-text">Redes Sociales:</p>&nbsp;</li><li><a href="https://es-es.facebook.com"><img class="soci" src="facebook.png" role="button" ></a></li><li><a href="https://twitter.com/?lang=es"><img class="soci" src="gorjeo.png"></a></li>
-  </ul>
-  </div>
-</nav>
 
-<script src="jquery-3.2.0.js"></script>
-<script src="js/bootstrap.js"></script>
 
-</body>
-</html>
+
+
+  
