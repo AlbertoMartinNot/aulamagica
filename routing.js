@@ -12,7 +12,7 @@ magia.config(['$routeProvider', function($routeProvider) {
       templateUrl : "registro.html"
   })
   .when("/perfil", {
-      templateUrl : "perfil-kun.html"
+      templateUrl : "perfil.html"
   })
   .when("/cursos", {
       templateUrl : "cursossinregistro.html"
