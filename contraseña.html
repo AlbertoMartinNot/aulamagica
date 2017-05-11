@@ -1,13 +1,15 @@
 <div id="jumbo" class="jumbotron">
 <h1>Recuperar Contraseña</h1>
 </div>
+<div class="container-fluid">
 <div class="w1 well well-lg col-lg-8 col-lg-offset-2">
-   <p><mark>Introduce tu usuario y tu correo electrónico para verificar que estás registrado y te enviaremos un correo con tu antigua contraseña:</mark> </p><br><br>
-   
-    <form method="POST">
-          <strong>Usuario:</strong> <input type="text"  placeholder="Introduce tu usuario" name="user"><br><br>
-          <strong>Introduce tu correo electrónico: </strong> <input type="text"  placeholder="Introduce tu correo" name="correo"><br><br>
-        <button type="submit" class="btn btn-success">Recuperar Contraseña&nbsp;</button>
-    </form><br>
+   <p><mark>Introduce tu usuario y tu correo electrónico para verificar que estás registrado y te enviaremos un correo con tu antigua contraseña:</mark> </p><br>
+   <form method="POST">
+   	<div class="form-group"><label>Usuario:</label><input class="form-control" type="text" name="user" placeholder="Introduce tu nombre de usuario..."></div>
+   	<div class="form-group"><label>Contraseña:</label><input class="form-control" type="mail" name="mail" placeholder="Introduce tu correo electrónico..."></div>
+   	<br><button class="btn btn-primary btn-lg pull-right">Recuperar Contraseña</button>
+   </form>
+    <br>
+</div>
 </div>
     

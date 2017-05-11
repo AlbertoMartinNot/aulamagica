@@ -28,6 +28,9 @@ magia.config(['$routeProvider', function($routeProvider) {
   })
       .when("/login", {
       templateUrl : "iniciarsesion.html"
+  })
+  .when("/info", {
+      templateUrl : "infocursos.html"
   });
 
  }]);
