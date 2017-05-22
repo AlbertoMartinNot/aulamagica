@@ -13,31 +13,31 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-route.min.js"></script>
   <script src="routing.js"></script>
   <script src="validacionregistro.js"></script>
-  <script src="cursos.controller.js"></script>
   <style type="text/css">.active{color:black;}</style> 
 </head>
 <body>
 
-<nav class="nave navbar-collapse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-    <i class="fa fa-bars fa-lg" aria-hidden="true"></i>                
-      </button>
-      <a class="navbar-brand" href="#" style="font-size: 20px;" >AulaMagica</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="#!/cursos"><span class="glyphicon glyphicon-list"></span>&nbsp;Cursos</a></li>
-        <li><a href="#!/perfil"><span class="glyphicon glyphicon-user"></span>&nbsp;Perfil</a></li>
-        <li><a href="#!/foro"><span class="glyphicon glyphicon-comment"></span>&nbsp;Foro</a></li>
-      </ul>
-      <ul id="myNavbar" class="nav navbar-nav navbar-right">
-        <li><a href="#!/contacto"><span class="glyphicon glyphicon-envelope"></span>&nbsp;Contacto</a></li>
+  <nav class="nave navbar-collapse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <i class="fa fa-bars fa-lg" aria-hidden="true"></i>                
+        </button>
+        <a class="navbar-brand" href="#" name="ini" style="font-size: 20px;" ><i class="fa fa-magic" aria-hidden="true"></i>
+          AulaMagica </a>
+          </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="#!/cursos" name="cursos"><span class="glyphicon glyphicon-list"></span>&nbsp;Cursos</a></li>
+            <li><a href="#!/perfil" name="perfil"><span class="glyphicon glyphicon-user"></span>&nbsp;Perfil</a></li>
+            <li><a href="#!/foro" name="foro"><span class="glyphicon glyphicon-comment"></span>&nbsp;Foro</a></li>
           </ul>
-    </div>
-  </div>
-</nav>
+          <ul id="myNavbar" class="nav navbar-nav navbar-right">
+            <li><a href="#!/contacto" name="contact"><span class="glyphicon glyphicon-envelope"></span>&nbsp;Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
 <div ng-view></div><br><br>
 
@@ -53,9 +53,9 @@
       <div class="col-md-4 col-sm-6 paddingtop-bottom">
         <h6 class="heading7">ENLACES:</h6>
         <ul class="footer-ul">
-          <li><a href="#!/info"><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i>
+          <li><a href="#!/info" name="info2"><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i>
             &nbsp;Informacion</a></li>
-            <li><a href="#!/contacto"><i class="fa fa-user-circle-o fa-lg" aria-hidden="true"></i>
+            <li><a href="#!/contacto" name="contact2"><i class="fa fa-user-circle-o fa-lg" aria-hidden="true"></i>
               &nbsp;Contacto</a></li>
               <li><a>Politica de Cookies</a></li>
             </ul>
